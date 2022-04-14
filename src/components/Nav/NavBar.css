@@ -1,0 +1,47 @@
+
+
+.title{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+    text-decoration: none;
+    list-style: none;
+    left:20px;
+}
+
+.navbar{
+    background-color: var(--black);
+    border-bottom: 1px solid var(--white);
+    padding-top: 20px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.settings-icon{
+    margin-right:15px;
+    cursor: pointer;
+}
+.settings-icon:hover{
+    color: #838383;
+}
+
+
+.stats-icon{
+    margin-bottom:6px;
+    margin-right:6px;
+    cursor: pointer;
+}
+
+.stats-icon:hover{
+    color: #838383;
+}

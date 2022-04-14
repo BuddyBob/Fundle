@@ -1,0 +1,46 @@
+
+.grid {
+    width: 380px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    position: relative; 
+    z-index: 1;
+
+  }
+  
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin:1px;
+  }
+  
+.letter {
+    flex: 0%;
+    height:70px;
+    border: 1px solid var(--gridborders);
+    border-radius: 5px;
+    margin: 3px;
+    display: grid;
+    place-items: center;
+    font-size: 33px;
+    color: white;
+    font-family: "Oswald", Helvetica, sans-serif;
+}
+
+#green {
+  background-color: var(--correct);
+}
+
+#grey {
+  background-color: var(--incorrect);
+}
+
+#yellow {
+  background-color: var(--almost);
+}

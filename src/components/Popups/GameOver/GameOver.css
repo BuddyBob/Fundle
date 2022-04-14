@@ -1,0 +1,44 @@
+.gameOver{
+    position: relative;
+    bottom: 220px;
+    left: 0;
+    width: 400px;
+    height:305px;
+    background-color: var(--popup);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding-bottom:  20px;
+}
+
+.results{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameOver.winner{
+    border: 2px solid #3db033;
+}
+
+.gameOver.looser{
+    border: 2px solid #b03333;
+}
+
+.gameOverTitle{
+    padding-top: 20px;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    left: 89%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

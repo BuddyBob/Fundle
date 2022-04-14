@@ -1,0 +1,53 @@
+.stats{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.statsInner{
+  position: relative;
+  top:41.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 42%;
+  background-color: var(--popup);
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.statsTitle{
+  padding-top: 20px;
+}
+
+.results1{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    left:58px;
+}
+
+
+.r1{
+    margin-right: -10px;
+}
+
+
+.close1{
+    position: absolute;
+    width: 17.5%;
+    height: 25px;
+    top:240px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 5;
+}
+
+
+.tries{
+  margin-top:50px;
+}
+
