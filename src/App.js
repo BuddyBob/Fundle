@@ -5,7 +5,6 @@ import GameOver from "./components/Popups/GameOver/GameOver.js"
 import GetData from './components/GetData.js'
 import Giveup from './components/Popups/Giveup/Giveup.js'
 import React, { createContext, useState, useEffect } from "react" 
-import { Alert, AlertTitle, Button } from '@mui/material';
 import "./App.css"
 
 export const AppContext = createContext()
@@ -100,6 +99,7 @@ const App = () =>  {
           // add 1 to games in localstorage
         setCurrAttempt({currRow: 0, currCol: 0})
         setGameOver({gameOver:false, winner:false})
+        setGiveUp(false)
         setDisabledLetters([])
         
         // get new word
@@ -153,7 +153,7 @@ const App = () =>  {
                     deleteKey,
                     gameOver,
                     restartGame,
-                    disabledLetters,
+                    disabledLetters
 
                 }}>
                 <div className="display">

@@ -20,11 +20,11 @@
 }
 
 .gameOver.winner{
-    border: 2px solid #3db033;
+    border: 2px solid var(--winner);
 }
 
 .gameOver.looser{
-    border: 2px solid #b03333;
+    border: 2px solid var(--loser);
 }
 
 .gameOverTitle{

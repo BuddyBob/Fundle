@@ -1,20 +1,13 @@
 .stats{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.statsInner{
-  position: relative;
-  top:41.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 42%;
-  background-color: var(--popup);
-  border-radius: 20px;
-  z-index: 2;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: var(--popup);
+    border-radius: 20px;
+    z-index: 2;
+    margin-bottom:20px;
 }
 
 .statsTitle{
@@ -36,14 +29,15 @@
 
 
 .close1{
-    position: absolute;
-    width: 17.5%;
-    height: 25px;
-    top:240px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 5;
+  position: absolute;
+  top: 15px;
+  left: 89%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 

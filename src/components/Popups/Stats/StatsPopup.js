@@ -12,7 +12,7 @@ const StatsPopup = () => {
 
     return (
         <div className={'stats'}>
-            <IoClose aria-label="close button" className="class-btn close1" style={{color: "white"}} onClick={() => {setTogglePopup({popup:false, popupState:""})}} type="image"/> 
+            <IoClose className="class-btn close1" style={{color: "white"}} onClick={() => {setTogglePopup({popup:false, popupState:""})}} type="image"/> 
             <div className="statsInner">
                 <div className="statsTitle">
                     <h1>Statistics</h1>
