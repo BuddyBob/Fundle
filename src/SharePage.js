@@ -6,10 +6,10 @@ import Home from "./Home.js"
 const SharePage = () => {
     const location = useLocation()
     const query = new URLSearchParams(location.search);
-    console.log(base64_decode(query.get('word')))
+    const word = base64_decode(query.get('word'))
     return (
         <div>
-            <Home sharePage={true}/>
+            <Home sharePage={true} sharedWord={word}/>
         
         </div>
     )

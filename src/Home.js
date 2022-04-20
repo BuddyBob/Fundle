@@ -6,11 +6,12 @@ import GetData from './components/GetData.js'
 import Giveup from './components/Popups/Giveup/Giveup.js'
 import Share from './components/Popups/Share/Share.js'
 import React, { createContext, useState, useEffect } from "react" 
+import { useNavigate } from 'react-router-dom'
 import "./Home.css"
 
 export const AppContext = createContext()
 
-const Home = (sharePage) =>  {
+const Home = (props) =>  {
 
     const [grid, setGrid] = useState([
         ["", "", "", "", ""],
@@ -29,16 +30,23 @@ const Home = (sharePage) =>  {
     const [disabledLetters, setDisabledLetters] = useState([])
     const [giveUp, setGiveUp] = useState(false)
     const [share, setShare] = useState(false)
-    console.log("SharePage", sharePage.sharePage)
+    const [sharePage, setSharePage] = useState(props.sharePage)
+    const navigate = useNavigate()
+    let sharedWord = props.sharedWord
+    if (sharedWord !== undefined){sharedWord = sharedWord.toUpperCase()}
+    console.log("SharedWord", sharedWord)
 
     useEffect(() => {
         GetData()
+        if (sharePage){
+            console.log('hi')
+            setCurrWord(sharedWord)
+        }
+        else{
         getWord().then((word) => {
-          setCurrWord(word);
-          if (sharePage.sharePage){
-            setShare(true)
-          }
-        });
+            setCurrWord(word);
+        })}
+
       }, []);
 
 
@@ -61,8 +69,12 @@ const Home = (sharePage) =>  {
             for (let i = 0; i < grid[currAttempt.currRow].length; i++){
                 word.push(grid[currAttempt.currRow][i].toLowerCase())
             }
+            let valid = guessBank.includes(word.join('')) || wordBank.includes(word.join(''))
+            if (currWord === grid[currAttempt.currRow].join('')){
+                valid = true
+            }
             
-            if (guessBank.includes(word.join('')) || wordBank.includes(word.join(''))){
+            if (valid){
                 if (currAttempt.currRow < 6){
                     if (currWord === grid[currAttempt.currRow].join('')){
                         setGameOver({gameOver:true, winner:true})
@@ -104,6 +116,7 @@ const Home = (sharePage) =>  {
             ["", "", "", "", ""],
           ])
           // add 1 to games in localstorage
+        setSharePage(false)
         setError({errorState:false,errorMessage:""})
         setShare(false)
         setCurrAttempt({currRow: 0, currCol: 0})
@@ -119,6 +132,7 @@ const Home = (sharePage) =>  {
             letters.push(word[i].toUpperCase())
         }
         setCurrWord(letters.join(''))
+        navigate('/')
     }
     
     function addKey(k){
@@ -152,6 +166,7 @@ const Home = (sharePage) =>  {
     }
 
     function shareFunc(){
+        console.log('hi')
         setShare(true)
     }
     return (
@@ -181,7 +196,7 @@ const Home = (sharePage) =>  {
                         <button onClick={() => giveup()} class="btn" role="button">Give Up?</button>
                         : null}
 
-                        {!share ?
+                        {!share && sharePage !== true ?
                         <button onClick={() => shareFunc()} class="btn" role="button">Share?</button>
                         : null}
                     </div>
