@@ -31,23 +31,28 @@ const Home = (props) =>  {
     const [giveUp, setGiveUp] = useState(false)
     const [share, setShare] = useState(false)
     const [sharePage, setSharePage] = useState(props.sharePage)
+    const [scrollHeight, setScrollHeight] = useState(0)
     const navigate = useNavigate()
     let sharedWord = props.sharedWord
     if (sharedWord !== undefined){sharedWord = sharedWord.toUpperCase()}
-    console.log("SharedWord", sharedWord)
 
     useEffect(() => {
         GetData()
         if (sharePage){
-            console.log('hi')
             setCurrWord(sharedWord)
         }
         else{
         getWord().then((word) => {
+            console.log(word)
             setCurrWord(word);
         })}
-
       }, []);
+
+    useEffect(() => {
+        setInterval(()=>{
+            setScrollHeight(window.pageYOffset)
+        }, 2000)
+    }, [])
 
 
     function getWord(){
@@ -171,7 +176,9 @@ const Home = (props) =>  {
     }
     return (
         <div className="Home">
+            {scrollHeight < 65 ?
             <NavBar />
+            : null}
             <AppContext.Provider value=
                 {{
                     grid, 
