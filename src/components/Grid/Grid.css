@@ -17,11 +17,10 @@
     }
     .grid {
       bottom:80px;
-      width: 300px;
+      width: 350px;
       height:200px;
     }
     .letter{
-      height:40px;
     }
   }
   
@@ -46,6 +45,7 @@
     color: white;
     font-family: "Oswald", Helvetica, sans-serif;
 }
+
 
 #green {
   background-color: var(--correct);
