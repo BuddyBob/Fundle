@@ -24,8 +24,14 @@
 body{
     margin:0;
     padding:0;
-    scrollbar-width: none; /* for Firefox */
     overflow-x: hidden;
+}
+
+@media screen and (min-height: 800px) {
+    body{
+        overflow-y: hidden;
+    }
+    
 }
 
 h1{
@@ -53,6 +59,16 @@ li{
     width: 100%;
     height: 1180px;
 }
+
+@media screen and (max-height: 799px) {
+    .Home{
+        padding: 0;
+        margin: 0;
+        overscroll-behavior: auto;
+    }
+    
+}
+
 
 .display{
     position: relative;
