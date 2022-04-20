@@ -21,8 +21,8 @@ const Share = () => {
     e.preventDefault();
     if (text.length === 5){
       searchParams.append("word", base64_encode(text))
-      setText("http://localhost:3000/#/Share?" + searchParams.toString());
-      copy("http://localhost:3000/#/Share?" + searchParams.toString())
+      setText("https://fundl.herokuapp.com/#/Share?" + searchParams.toString());
+      copy("https://fundl.herokuapp.com/#/Share?" + searchParams.toString())
       setCopy(true)
     }
     else{
