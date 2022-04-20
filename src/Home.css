@@ -24,7 +24,6 @@
 body{
     margin:0;
     padding:0;
-    background-color: var(--black);
 }
 
 h1{
@@ -47,7 +46,7 @@ li{
     margin-right:5px
 }
 
-.App {
+.Home {
     text-align: center;
     background-color: #121212;
     width: 100vw;
@@ -64,7 +63,7 @@ li{
     align-items: center;
 }
 
-.giveupBtn {
+.btn {
     background-color: var(--button);
     border-radius: 8px;
     border-style: none;
@@ -74,7 +73,6 @@ li{
     font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
     right:140px;
     font-size: 14px;
-    font-weight: 500;
     height: 40px;
     line-height: 20px;
     outline: none;
@@ -82,28 +80,19 @@ li{
     padding: 10px 16px;
     position: relative;
     transition: 300ms;
+    margin-right:10px;
     }
 
-.giveupBtn:hover{
+.btn:hover{
     background-color: var(--available);
 }
 
-/* .error{
-    background-color: var(--button);
-    border-radius: 8px;
-    border-style: none;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-    right:140px;
-    font-size: 14px;
-    font-weight: 500;
-    height: 40px;
-    line-height: 20px;
-    outline: none;
-    margin-bottom:8px;
-    padding: 10px 16px;
+.btn-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    transition: 300ms;
-} */
+    left:45px;
+}
+
+

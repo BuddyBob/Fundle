@@ -1,6 +1,6 @@
 import React, { useContext, useCallback, useEffect} from 'react'
 import Key from './Key'
-import { AppContext } from "../../App";
+import { AppContext } from "../../Home";
 import './Keyboard.css'
 
 const Keyboard = () => {

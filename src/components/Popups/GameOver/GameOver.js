@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { IoClose } from 'react-icons/io5'
-import { AppContext } from '../../../App'
+import { AppContext } from '../../../Home'
 import './GameOver.css'
 
 const GameOver = () => {

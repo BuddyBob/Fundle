@@ -1,9 +1,16 @@
 import React, {useContext} from 'react'
 import { IoClose } from 'react-icons/io5'
-import { AppContext } from '../../../App'
+import { AppContext } from '../../../Home'
 import './Giveup.css'
 const Giveup = () => {
-  const { currWord, restartGame } = useContext(AppContext) 
+  const { currWord, restartGame} = useContext(AppContext) 
+  let { games, streak, losses, tries, wins } = JSON.parse(localStorage.getItem("stats"))
+  losses ++
+  streak = 0
+  games ++ 
+  const newData = {"games":games, "streak":streak, "wins":wins, "losses":losses, "tries":tries}
+  localStorage.setItem("stats", JSON.stringify(newData))
+  
   return (
     <div>
         <div className="giveupPop">

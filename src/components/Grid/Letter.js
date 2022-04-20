@@ -1,7 +1,7 @@
 
    
 import React, { useContext } from "react";
-import { AppContext } from "../../App";
+import { AppContext } from "../../Home";
 
 function Letter({ lpos, attempt }) {
   const { grid, currAttempt, currWord } = useContext(AppContext);

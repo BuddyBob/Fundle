@@ -1,6 +1,6 @@
-.giveupPop{
+.sharePop{
   position: absolute;
-  top: 200px;
+  top: 230px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
@@ -9,7 +9,8 @@
   z-index: 2;
   margin-bottom:20px;
 }
-.giveupPopInner{
+
+.sharePopInner{
   position: relative;
   top:41.5%;
   left: 50%;
@@ -19,13 +20,13 @@
   background-color: var(--popup);
   border-radius: 20px;
   z-index: 2;
-  padding-top:55px;
+  padding-top:61px;
 }
 
-.close2{
+.close3{
   position: absolute;
-  bottom: 180px;
-  left: 90%;
+  bottom: 220px;
+  left: 89%;
   width: 30px;
   height: 30px;
   display: flex;
@@ -33,4 +34,16 @@
   align-items: center;
   cursor: pointer;
   z-index: 3;
+}
+
+.shareInput{
+  background-color: var(--white);
+  border: var(--button) 3px solid;
+  border-radius:8px;
+  padding:10px;
+  margin-top:15px;
+}
+
+.shareInput:focus{
+  outline: none;
 }

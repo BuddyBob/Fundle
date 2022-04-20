@@ -1,5 +1,5 @@
 import React,{ useContext } from 'react'
-import { AppContext } from '../../App'
+import { AppContext } from '../../Home'
 import './Keyboard.css'
 
 const Key = ({keyVal, special}) => {
