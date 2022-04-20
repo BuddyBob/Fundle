@@ -34,7 +34,7 @@ const Home = (props) =>  {
     const navigate = useNavigate()
     let sharedWord = props.sharedWord
     if (sharedWord !== undefined){sharedWord = sharedWord.toUpperCase()}
-    console.log("SharedWord ", sharedWord)
+    console.log("SharedWord", sharedWord)
 
     useEffect(() => {
         GetData()
