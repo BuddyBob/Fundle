@@ -18,7 +18,7 @@ function NavBar() {
       <div>
         <nav className="navbar">
             <div className="title">
-              <h1>Fundle</h1>
+              <h1>Fundl</h1>
             </div>
             <div className="navbar-links">
               <li>

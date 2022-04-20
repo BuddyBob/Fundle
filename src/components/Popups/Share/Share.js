@@ -2,14 +2,15 @@ import React, { useContext, useState} from 'react'
 import { IoClose } from 'react-icons/io5'
 import { AppContext } from '../../../Home'
 import { useNavigate } from 'react-router-dom';
+import copy from "copy-to-clipboard";  
 import { encode as base64_encode } from 'base-64';
 import "./Share.css"
 
 const Share = () => {
   
-  const navigate = useNavigate();
   const { setShare, deleteKey } = useContext(AppContext) 
   const [text, setText] = useState("")
+  const [copyTxt, setCopy] = useState(false)
   const searchParams = new URLSearchParams();
 
   function handleChange(e) {
@@ -21,6 +22,8 @@ const Share = () => {
     if (text.length === 5){
       searchParams.append("word", base64_encode(text))
       setText("http://localhost:3000/#/Share?" + searchParams.toString());
+      copy("http://localhost:3000/#/Share?" + searchParams.toString())
+      setCopy(true)
     }
     else{
       alert("Please enter a 5 letter word")
@@ -38,9 +41,9 @@ const Share = () => {
         <div className="sharePopInner">
             <h1>Share A Word</h1>
             <form onSubmit={handleSubmit}>
-              <input className="shareInput" type="text" value={text} onChange={handleChange} placeholder="Enter a word to share" />
+              <input className="shareInput" type="text" value={text} onChange={handleChange} placeholder="Enter a word to share" onFocus={(event) => event.target.select()}/>
             </form>
-
+            {copyTxt ? <h5 className="copyText">Share with a friend</h5> : null}
         </div>
     </div>
   )

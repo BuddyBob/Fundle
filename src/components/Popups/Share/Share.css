@@ -7,7 +7,6 @@
   background-color: var(--popup);
   border-radius: 20px;
   z-index: 2;
-  margin-bottom:20px;
 }
 
 .sharePopInner{
@@ -21,6 +20,14 @@
   border-radius: 20px;
   z-index: 2;
   padding-top:61px;
+}
+
+.copyText{
+  position: absolute;
+  align-items: center;
+  left:110px;
+  top:200px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .close3{
