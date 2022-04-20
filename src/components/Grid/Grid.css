@@ -10,6 +10,20 @@
     z-index: 1;
 
   }
+
+  @media screen and (max-width: 600px) {
+    .row{
+      height:90px;
+    }
+    .grid {
+      bottom:80px;
+      width: 300px;
+      height:200px;
+    }
+    .letter{
+      height:40px;
+    }
+  }
   
 .row {
     display: flex;

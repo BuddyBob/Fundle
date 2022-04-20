@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 32%;
+    width: 25%;
     border-radius: 5px;
     position: relative;
     margin: auto;
@@ -14,7 +14,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 28%;
+    width: 20%;
     border-radius: 5px;
     position: relative;
     margin: auto;
@@ -25,7 +25,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 32%;
+    width:25%;
     border-radius: 5px;
     position: relative;
     margin: auto;
@@ -33,17 +33,38 @@
 }
 
 .key{
-    width: 150px;
+    width: 200px;
     padding:20px 15px 20px 15px;
     margin:2px;
     border-radius: 5px;
     font-family: 'Oswald', Impact, 'Arial Narrow Bold', sans-serif;
     color: var(--white);
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     cursor: pointer;
     place-items: center;
 }
+
+@media screen and (max-width: 600px) {
+    .row3{
+        width:20%;
+    }
+    .key{
+        width: 200px;
+        padding:13px 14px 13px 14px;
+        margin:1.2px;
+        border-radius: 6px;
+        font-family: 'Oswald', Impact, 'Arial Narrow Bold', sans-serif;
+        color: var(--white);
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        place-items: center;
+    }
+    
+}
+
+
 
 .key[id="available"]{
     background-color: var(--available);
