@@ -22,12 +22,23 @@
   padding-top:61px;
 }
 
+.shareTitle{
+  position: relative;
+  left:17%;
+}
+
+.shareInput{
+  position: relative;
+  left:25%;
+}
+
 .copyText{
   position: absolute;
   align-items: center;
-  left:110px;
+  left:115px;
   top:200px;
   font-family: 'Roboto', sans-serif;
+  color: var(--white)
 }
 
 .close3{

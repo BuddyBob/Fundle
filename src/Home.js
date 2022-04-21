@@ -22,7 +22,7 @@ const Home = (props) =>  {
         ["", "", "", "", ""],
       ])
     const [currAttempt, setCurrAttempt] = useState({currRow: 0, currCol: 0})
-    const [gameOver, setGameOver] = useState({gameOver:false, winner:false})
+    const [gameOver, setGameOver] = useState({gameOver:true, winner:false})
     const wordBank = require(`./components/WordBank.json`).wordbank
     const guessBank = require(`./components/GuessBank.json`).guessbank
     const [currWord, setCurrWord] = useState("")

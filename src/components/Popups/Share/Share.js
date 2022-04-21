@@ -39,7 +39,7 @@ const Share = () => {
     <div className="sharePop">
         <IoClose aria-label="close button" className="class-btn close3" style={{color: "white"}} onClick={() => close()} type="image"/> 
         <div className="sharePopInner">
-            <h1>Share A Word</h1>
+            <h1 className="shareTitle">Share A 5 Letter Word</h1>
             <form onSubmit={handleSubmit}>
               <input className="shareInput" type="text" value={text} onChange={handleChange} placeholder="Enter a word to share" onFocus={(event) => event.target.select()}/>
             </form>

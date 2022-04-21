@@ -29,7 +29,6 @@ const GameOver = () => {
                 <div className="gameOverTitle">
                     <h1>{gameOver.winner ? "You Win!" : "You Lose!"}</h1>
                 </div>
-
                 <hr/>
                 <br/>
 

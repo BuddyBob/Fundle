@@ -16,8 +16,8 @@ const Giveup = () => {
         <div className="giveupPop">
           <IoClose aria-label="close button" className="class-btn close2" style={{color: "white"}} onClick={() => restartGame()} type="image"/> 
             <div className="giveupPopInner">
-                <h1>You Give Up</h1>
-                    <h2>The word was - <strong>{currWord}</strong></h2>
+                <h1 className="giveupTitle">You Give Up</h1>
+                <h2 className="giveupDesc">The word was - <strong>{currWord}</strong></h2>
             </div>
         </div>
     </div>

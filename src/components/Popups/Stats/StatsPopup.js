@@ -10,9 +10,13 @@ const StatsPopup = () => {
     const { setTogglePopup } = useContext(NavContext)
     let { games, streak, wins, losses, tries } = JSON.parse(localStorage.getItem("stats"))
 
+    function closePopup() {
+        console.log("close")
+        setTogglePopup({popup:false, popupState:""})
+    }
     return (
-        <div className={'stats'}>
-            <IoClose className="class-btn close1" style={{color: "white"}} onClick={() => {setTogglePopup({popup:false, popupState:""})}} type="image"/> 
+        <div className='stats'>
+            <a><IoClose className="close1" style={{color: "white"}} onClick={() => closePopup()} type="image"/>  </a>
             <div className="statsInner">
                 <div className="statsTitle">
                     <h1>Statistics</h1>

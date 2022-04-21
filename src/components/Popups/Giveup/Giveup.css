@@ -22,6 +22,16 @@
   padding-top:55px;
 }
 
+.giveupTitle{
+  position: relative;
+  left:33%;
+}
+
+.giveupDesc{
+  position: relative;
+  left:20%;
+}
+
 .close2{
   position: absolute;
   bottom: 180px;
