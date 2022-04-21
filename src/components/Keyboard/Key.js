@@ -3,7 +3,7 @@ import { AppContext } from '../../Home'
 import './Keyboard.css'
 
 const Key = ({keyVal, special}) => {
-    const { grid, setGrid, currAttempt, setCurrAttempt, checkAnswer, deleteKey, addKey, disabledLetters} = useContext(AppContext)
+    const { grid, setGrid, currAttempt, setCurrAttempt, checkAnswer, deleteKey, addKey, disabledLetters, okLetters} = useContext(AppContext)
 
 
     
@@ -15,6 +15,13 @@ const Key = ({keyVal, special}) => {
     if (disabledLetters.length > 0){
         if (disabledLetters.includes(keyVal.toUpperCase()) ){
             type = "disabled"
+            if (okLetters.yellow.includes(keyVal.toUpperCase())){
+                type = "yellow"
+            }
+            if (okLetters.green.includes(keyVal.toUpperCase())){
+                type = "green"
+            }
+            console.log(okLetters)
         }
         else{
             type = "available"

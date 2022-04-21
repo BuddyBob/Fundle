@@ -32,7 +32,7 @@ const Home = (props) =>  {
     const [share, setShare] = useState(false)
     const [sharePage, setSharePage] = useState(props.sharePage)
     const [scrollHeight, setScrollHeight] = useState(0)
-    const [okLetters, setOkLetters] = useState([])
+    const [okLetters, setOkLetters] = useState({green: [], yellow: []})
     const navigate = useNavigate()
     let sharedWord = props.sharedWord
     if (sharedWord !== undefined){sharedWord = sharedWord.toUpperCase()}
@@ -92,6 +92,13 @@ const Home = (props) =>  {
                         setCurrAttempt({currRow: currAttempt.currRow + 1, currCol: 0})
                         for (let i = 0; i < grid[currAttempt.currRow].length; i++){
                             if (!disabledLetters.includes(grid[currAttempt.currRow][i])){
+                                if (currWord[i] === grid[currAttempt.currRow][i]){
+                                    console.log(grid[currAttempt.currRow][i])
+                                    setOkLetters({green: [...okLetters.green, grid[currAttempt.currRow][i]], yellow: okLetters.yellow})
+                                }
+                                else if (currWord.includes(grid[currAttempt.currRow][i])){
+                                    setOkLetters({green: okLetters.green, yellow: [...okLetters.yellow, grid[currAttempt.currRow][i]]})
+                                }
                                 setDisabledLetters(disabledLetters => [...disabledLetters, grid[currAttempt.currRow][i]])   
                             }
                         }
@@ -195,7 +202,8 @@ const Home = (props) =>  {
                     restartGame,
                     disabledLetters,
                     share,
-                    setShare
+                    setShare,
+                    okLetters
 
                 }}>
                 <div className="display">
@@ -205,7 +213,7 @@ const Home = (props) =>  {
                         : null}
 
                         {!share && sharePage !== true ?
-                        <button onClick={() => shareFunc()} class="btn" role="button">Share</button>
+                        <button onClick={() => shareFunc()} class="btn" role="button">Share?</button>
                         : null}
                     </div>
 

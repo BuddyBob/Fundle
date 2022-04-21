@@ -77,3 +77,13 @@
 .key[id="special"]{
     padding:20px 15px 20px 15px;
 }
+
+.key[id="green"]{
+    background-color: var(--correct);
+    cursor: default;
+}
+
+.key[id="yellow"]{
+    background-color: var(--almost);
+    cursor: default;
+}
