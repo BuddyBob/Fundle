@@ -54,11 +54,11 @@ const Keyboard = () => {
         ))}
       </div>
       <div className="row3">
-        <Key keyVal="Enter" special/>
+        <Key keyVal="Delete" special/>
         {keys3.map((key) => (
           <Key keyVal={key} />
         ))}
-        <Key keyVal="Delete" special/>
+        <Key keyVal="Enter" special/>
       </div>
     </div>
   )

@@ -201,11 +201,11 @@ const Home = (props) =>  {
                 <div className="display">
                     <div className="btn-row">
                         {!giveUp ? 
-                        <button onClick={() => giveup()} class="btn" role="button">Give Up?</button>
+                        <button onClick={() => giveup()} class="btn" role="button">Give Up</button>
                         : null}
 
                         {!share && sharePage !== true ?
-                        <button onClick={() => shareFunc()} class="btn" role="button">Share?</button>
+                        <button onClick={() => shareFunc()} class="btn" role="button">Share</button>
                         : null}
                     </div>
 
