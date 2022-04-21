@@ -21,14 +21,14 @@
     --loser:#b03333
 }
 html{
-       -webkit-overflow-x-scrolling: auto;
+       -webkit-overflow-x-scrolling: hidden;
           overflow-x: hidden !important;
        -webkit-overflow-x-scrolling: hidden;
 }
 body{
     margin:0;
     padding:0;
--webkit-overflow-x-scrolling: auto;
+-webkit-overflow-x-scrolling: hidden;
 -webkit-overflow-x-scrolling: hidden;
     overflow-x: hidden !important;
 }
@@ -68,10 +68,9 @@ li{
 }
 
 @media screen and (max-height: 799px) {
-    .Home{
-        padding: 0;
-        margin: 0;
+    body{
         overflow-y: hidden;
+        height:880px
     }
     
 }
@@ -119,7 +118,7 @@ li{
 @media screen and (max-width: 600px) {
     .btn-row{
         bottom:80px;
-        left:65px;
+        left:50px;
     }
 }
     

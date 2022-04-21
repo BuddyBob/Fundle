@@ -35,7 +35,7 @@
 .copyText{
   position: absolute;
   align-items: center;
-  left:115px;
+  left:112px;
   top:200px;
   font-family: 'Roboto', sans-serif;
   color: var(--white)

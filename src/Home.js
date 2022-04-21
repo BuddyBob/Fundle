@@ -32,6 +32,7 @@ const Home = (props) =>  {
     const [share, setShare] = useState(false)
     const [sharePage, setSharePage] = useState(props.sharePage)
     const [scrollHeight, setScrollHeight] = useState(0)
+    const [okLetters, setOkLetters] = useState([])
     const navigate = useNavigate()
     let sharedWord = props.sharedWord
     if (sharedWord !== undefined){sharedWord = sharedWord.toUpperCase()}

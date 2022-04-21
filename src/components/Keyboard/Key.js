@@ -13,7 +13,7 @@ const Key = ({keyVal, special}) => {
         type = "special"
     }
     if (disabledLetters.length > 0){
-        if (disabledLetters.includes(keyVal.toUpperCase())){
+        if (disabledLetters.includes(keyVal.toUpperCase()) ){
             type = "disabled"
         }
         else{
