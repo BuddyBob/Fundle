@@ -1,3 +1,4 @@
+
 @font-face {
     font-family:"karnakpro-condensedblack" ;
     src: url("./components/Fonts/karnakpro-condensedblack.ttf");
@@ -20,27 +21,25 @@
     --loser:#b03333
 }
 html{
-       -webkit-overflow-scrolling: auto;
-       overflow: hidden !important;
+       -webkit-overflow-x-scrolling: auto;
           overflow-x: hidden !important;
-       -webkit-overflow-scrolling: hidden;
+       -webkit-overflow-x-scrolling: hidden;
 }
 body{
     margin:0;
     padding:0;
--webkit-overflow-scrolling: auto;
--webkit-overflow-scrolling: hidden;
+-webkit-overflow-x-scrolling: auto;
+-webkit-overflow-x-scrolling: hidden;
     overflow-x: hidden !important;
-    overflow: hidden !important;
 }
 
-/* @media screen and (min-height: 800px) {
+@media screen and (min-height: 800px) {
     body{
         overflow-y: hidden;
      
     }
     
-} */
+}
 
 h1{
     font-family: 'karnakpro-condensedblack', sans-serif, Arial, Helvetica;
