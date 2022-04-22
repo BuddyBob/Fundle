@@ -94,10 +94,12 @@ const Home = (props) =>  {
                             if (!disabledLetters.includes(grid[currAttempt.currRow][i])){
                                 if (currWord[i] === grid[currAttempt.currRow][i]){
                                     console.log(grid[currAttempt.currRow][i])
-                                    setOkLetters({green: [...okLetters.green, grid[currAttempt.currRow][i]], yellow: okLetters.yellow})
+                                    //PROBLEM OCCURS HERE
+                                    setOkLetters({...okLetters, green: [...okLetters.green, grid[currAttempt.currRow][i]]});
                                 }
                                 else if (currWord.includes(grid[currAttempt.currRow][i])){
-                                    setOkLetters({green: okLetters.green, yellow: [...okLetters.yellow, grid[currAttempt.currRow][i]]})
+                                    //PROBLEM OCCURS HERE
+                                    setOkLetters({...okLetters, yellow: [...okLetters.yellow, grid[currAttempt.currRow][i]]});
                                 }
                                 setDisabledLetters(disabledLetters => [...disabledLetters, grid[currAttempt.currRow][i]])   
                             }

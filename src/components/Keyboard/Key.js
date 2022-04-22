@@ -14,14 +14,15 @@ const Key = ({keyVal, special}) => {
     }
     if (disabledLetters.length > 0){
         if (disabledLetters.includes(keyVal.toUpperCase()) ){
+            console.log(okLetters)
             type = "disabled"
             if (okLetters.yellow.includes(keyVal.toUpperCase())){
                 type = "yellow"
             }
             if (okLetters.green.includes(keyVal.toUpperCase())){
                 type = "green"
+                console.log(type, keyVal.toUpperCase())
             }
-            console.log(okLetters)
         }
         else{
             type = "available"
