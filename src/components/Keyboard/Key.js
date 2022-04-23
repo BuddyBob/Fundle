@@ -12,6 +12,8 @@ const Key = ({keyVal, special}) => {
     if (special === true){
         type = "special"
     }
+
+    //PROBLEM OCCURS HERE
     if (disabledLetters.length > 0){
         if (disabledLetters.includes(keyVal.toUpperCase()) ){
             console.log(okLetters)

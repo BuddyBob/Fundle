@@ -131,6 +131,7 @@ const Home = (props) =>  {
             ["", "", "", "", ""],
           ])
           // add 1 to games in localstorage
+        setOkLetters({green: [], yellow: []})
         setSharePage(false)
         setError({errorState:false,errorMessage:""})
         setShare(false)
