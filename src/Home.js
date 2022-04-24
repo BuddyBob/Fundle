@@ -79,7 +79,7 @@ const Home = (props) =>  {
             if (currWord === grid[currAttempt.currRow].join('')){
                 valid = true
             }
-            
+
             if (valid){
                 if (currAttempt.currRow < 6){
                     if (currWord === grid[currAttempt.currRow].join('')){
@@ -90,20 +90,22 @@ const Home = (props) =>  {
                     }
                     else{
                         setCurrAttempt({currRow: currAttempt.currRow + 1, currCol: 0})
+
+                        let tmpOkLetters = okLetters // here is temporary variable to make changes in loop
+
                         for (let i = 0; i < grid[currAttempt.currRow].length; i++){
                             if (!disabledLetters.includes(grid[currAttempt.currRow][i])){
+
                                 if (currWord[i] === grid[currAttempt.currRow][i]){
-                                    console.log(grid[currAttempt.currRow][i])
-                                    //PROBLEM OCCURS HERE
-                                    setOkLetters({...okLetters, green: [...okLetters.green, grid[currAttempt.currRow][i]]});
+                                    tmpOkLetters = {...tmpOkLetters, green: [...tmpOkLetters.green, grid[currAttempt.currRow][i]]}
                                 }
                                 else if (currWord.includes(grid[currAttempt.currRow][i])){
-                                    //PROBLEM OCCURS HERE
-                                    setOkLetters({...okLetters, yellow: [...okLetters.yellow, grid[currAttempt.currRow][i]]});
+                                    tmpOkLetters = {...tmpOkLetters, yellow: [...tmpOkLetters.yellow, grid[currAttempt.currRow][i]]}
                                 }
                                 setDisabledLetters(disabledLetters => [...disabledLetters, grid[currAttempt.currRow][i]])   
                             }
                         }
+                        setOkLetters(tmpOkLetters)
     
                     }
                 }
