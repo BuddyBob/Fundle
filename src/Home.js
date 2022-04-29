@@ -70,7 +70,6 @@ const Home = (props) =>  {
     }
     function checkAnswer(){
         if (share === false && giveUp === false){
-            console.log("Checking answer for", grid[currAttempt.currRow])
             let word = []
             for (let i = 0; i < grid[currAttempt.currRow].length; i++){
                 word.push(grid[currAttempt.currRow][i].toLowerCase())
@@ -95,14 +94,21 @@ const Home = (props) =>  {
 
                         for (let i = 0; i < grid[currAttempt.currRow].length; i++){
                             if (!disabledLetters.includes(grid[currAttempt.currRow][i])){
-
                                 if (currWord[i] === grid[currAttempt.currRow][i]){
-                                    tmpOkLetters = {...tmpOkLetters, green: [...tmpOkLetters.green, grid[currAttempt.currRow][i]]}
+                                        tmpOkLetters = {...tmpOkLetters, green: [...tmpOkLetters.green, grid[currAttempt.currRow][i]]}
+                                        if (okLetters.yellow.includes(grid[currAttempt.currRow][i])){
+                                            // remove   grid[currAttempt.currRow][i] from yellow list
+                                            tmpOkLetters = {...tmpOkLetters, yellow: tmpOkLetters.yellow.filter(letter => letter !== grid[currAttempt.currRow][i])}
+                                        }
                                 }
                                 else if (currWord.includes(grid[currAttempt.currRow][i])){
-                                    tmpOkLetters = {...tmpOkLetters, yellow: [...tmpOkLetters.yellow, grid[currAttempt.currRow][i]]}
+                                    if (!okLetters.green.includes(grid[currAttempt.currRow][i])){
+                                        tmpOkLetters = {...tmpOkLetters, yellow: [...tmpOkLetters.yellow, grid[currAttempt.currRow][i]]}
+                                   }
                                 }
-                                setDisabledLetters(disabledLetters => [...disabledLetters, grid[currAttempt.currRow][i]])   
+                                else{
+                                    setDisabledLetters(disabledLetters => [...disabledLetters, grid[currAttempt.currRow][i]])
+                                }   
                             }
                         }
                         setOkLetters(tmpOkLetters)

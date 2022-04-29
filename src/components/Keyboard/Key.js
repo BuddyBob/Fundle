@@ -13,23 +13,16 @@ const Key = ({keyVal, special}) => {
         type = "special"
     }
 
-    //PROBLEM OCCURS HERE
-    if (disabledLetters.length > 0){
-        if (disabledLetters.includes(keyVal.toUpperCase()) ){
-            console.log(okLetters)
-            type = "disabled"
-            if (okLetters.yellow.includes(keyVal.toUpperCase())){
-                type = "yellow"
-            }
-            if (okLetters.green.includes(keyVal.toUpperCase())){
-                type = "green"
-                console.log(type, keyVal.toUpperCase())
-            }
-        }
-        else{
-            type = "available"
-        }
+    if (disabledLetters.includes(keyVal.toUpperCase()) ){
+        type = "disabled"
     }
+    else if (okLetters.yellow.includes(keyVal.toUpperCase())){
+            type = "yellow"
+    }
+    else if (okLetters.green.includes(keyVal.toUpperCase())){
+            type = "green"
+    }
+
     else{
         type = "available"
     }
