@@ -249,7 +249,10 @@ const Home = (props) =>  {
 
                 : null}
             </div>
-            
+            <div className="text-center p-3 footer" style={{backgroundColor: "#6e6b6b"}}>
+                        © 2022 Copyright:
+                        <a className="text-reset fw-bold"> Thavas Antonio</a>
+                    </div>
 
         </div>
   )
