@@ -1,7 +1,6 @@
 import React, { useContext, useState} from 'react'
 import { IoClose } from 'react-icons/io5'
 import { AppContext } from '../../../Home'
-import { useNavigate } from 'react-router-dom';
 import copy from "copy-to-clipboard";  
 import { encode as base64_encode } from 'base-64';
 import "./Share.css"
